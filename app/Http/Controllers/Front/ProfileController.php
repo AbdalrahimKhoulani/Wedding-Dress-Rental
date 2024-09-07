@@ -25,7 +25,7 @@ class ProfileController extends Controller
     {
         $user_id = Auth::id();
         $user = $this->user_service->getUserById($user_id);
-        $latest_reservations = $this->reservation_service->getLatestReservationsForUser(Auth::id(),4);
+        $latest_reservations = $this->reservation_service->getLatestReservationsForUser(Auth::id(),2);
         // dd(isset($latest_reservations));
         if(count($latest_reservations)>0){
             return view('front.profile.show')

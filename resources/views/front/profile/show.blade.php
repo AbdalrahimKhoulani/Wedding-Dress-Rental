@@ -127,7 +127,7 @@
                                         </div>
                                     </div>
                                 @endforeach
-                                <div class="row"> <a href="{{ route('front.reservation.index') }}">view all dresss <i
+                                <div class="row"> <a href="{{ route('front.reservation.index') }}">view all reservations <i
                                     class="fa fa-angle-right"></i></a></div>
                             @else
                             <div class="alert alert-warning" role="alert">
