@@ -22,6 +22,9 @@ class DressController extends Controller
     public function show($id)
     {
         $dress = $this->dress_service->getDressById($id);
-        return view('front.dress.show')->with('dress',$dress);
+        if($dress){
+            return view('front.dress.show')->with('dress',$dress);
+        }
+        return redirect()->back()->with('error', 'Something wrong!');
     }
 }

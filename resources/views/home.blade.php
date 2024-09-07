@@ -25,138 +25,43 @@
                                             class="fa fa-angle-right"></i></a>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <div class="dress-item">
-                                    <a href="#"><img src="{{ asset('assets/images/carousel-1.jpg') }}"
-                                            alt=""></a>
-                                    <div class="down-content">
-                                        <a href="#">
-                                            <h4>Tittle goes here</h4>
+                        </div>
+                        <div class="row">
+
+                            @foreach ($latest_dresses as $dress)
+                                <div class="col-sm-12 col-md-6 col-lg-4">
+                                    <div class="dress-item">
+                                        <a href="{{ route('front.dress.show', ['id' => $dress->id]) }}">
+                                            <img src="{{ $dress->image }}" alt="">
                                         </a>
-                                        <h6>$25.75</h6>
-                                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                            aspernatur.</p>
-                                        <!-- <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul> -->
-                                        <a href="#"><span>View Details <i class="fa fa-angle-right"></i> </span></a>
+                                        <div class="down-content">
+                                            <div class="row">
+                                                <div class="col-8 px-1">
+                                                    <a href="{{ route('front.dress.show', ['id' => $dress->id]) }}">
+                                                        <h4>{{ $dress->name }}</h4>
+                                                    </a>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6>{{ $dress->price }} $</h6>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p>{{ Str::words($dress->description, 20, '...') }}</p>
+                                                <a href="{{ route('front.dress.show', ['id' => $dress->id]) }}">
+                                                    <span>
+                                                        View Details
+                                                        <i class="fa fa-angle-right"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+
+
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <div class="dress-item">
-                                    <a href="#"><img src="{{ asset('assets/images/carousel-1.jpg') }}"
-                                            alt=""></a>
-                                    <div class="down-content">
-                                        <a href="#">
-                                            <h4>Tittle goes here</h4>
-                                        </a>
-                                        <h6>$30.25</h6>
-                                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                            aspernatur.</p>
-                                        <!-- <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul> -->
-                                        <a href="#"><span>View Details <i class="fa fa-angle-right"></i> </span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <div class="dress-item">
-                                    <a href="#"><img src="{{ asset('assets/images/carousel-1.jpg') }}"
-                                            alt=""></a>
-                                    <div class="down-content">
-                                        <a href="#">
-                                            <h4>Tittle goes here</h4>
-                                        </a>
-                                        <h6>$20.45</h6>
-                                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                            aspernatur.</p>
-                                        <!-- <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul> -->
-                                        <a href="#"><span>View Details <i class="fa fa-angle-right"></i> </span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <div class="dress-item">
-                                    <a href="#"><img src="{{ asset('assets/images/carousel-1.jpg') }}"
-                                            alt=""></a>
-                                    <div class="down-content">
-                                        <a href="#">
-                                            <h4>Tittle goes here</h4>
-                                        </a>
-                                        <h6>$15.25</h6>
-                                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                            aspernatur.</p>
-                                        <!-- <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul> -->
-                                        <a href="#"><span>View Details <i class="fa fa-angle-right"></i> </span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <div class="dress-item">
-                                    <a href="#"><img src="{{ asset('assets/images/carousel-1.jpg') }}"
-                                            alt=""></a>
-                                    <div class="down-content">
-                                        <a href="#">
-                                            <h4>Tittle goes here</h4>
-                                        </a>
-                                        <h6>$12.50</h6>
-                                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                            aspernatur.</p>
-                                        <!-- <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul> -->
-                                        <a href="#"><span>View Details <i class="fa fa-angle-right"></i> </span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <div class="dress-item">
-                                    <a href="#"><img src="{{ asset('assets/images/carousel-1.jpg') }}"
-                                            alt=""></a>
-                                    <div class="down-content">
-                                        <a href="#">
-                                            <h4>Tittle goes here</h4>
-                                        </a>
-                                        <h6>$22.50</h6>
-                                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                            aspernatur.</p>
-                                        <!-- <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul> -->
-                                        <a href="#"><span>View Details <i class="fa fa-angle-right"></i> </span></a>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+
                         </div>
                     </div>
                 </div>

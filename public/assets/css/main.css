@@ -16,13 +16,11 @@ body {
 
 .section {
     background-color: #f8fafc;
-    /* White background */
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
-    /* Border radius */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Elevated effect */
+    border: #dee2e6 solid 1px;
 }
 
 .home-slider-container {
@@ -91,7 +89,7 @@ body {
 
 .dress-item .down-content {
     padding: 15px;
-    position: relative;
+    /* position: relative; */
 }
 
 .dress-item img {
@@ -110,11 +108,11 @@ body {
 }
 
 .dress-item .down-content h6 {
-    position: absolute;
-    top: 15px;
-    right: 30px;
-    font-size: 18px;
-    color: #121212;
+    /* position: absolute; */
+    /* top: 15px; */
+    /* right: 30px; */
+    font-size: 14px;
+    color: #ffffff;
 }
 
 .dress-item .down-content p {
@@ -143,11 +141,11 @@ body {
     margin-bottom: 20px !important;
 }
 
-.dress-item .down-content h6 {
+/* .dress-item .down-content h6 {
     position: absolute !important;
     top: 15px !important;
     right: 30px !important;
-}
+} */
 
 .dress-item .down-content span {
     position: absolute !important;
@@ -206,4 +204,42 @@ body {
 
     }
 
+}
+
+
+.dress-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.dress-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.down-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0; /* Initially hidden */
+}
+
+.dress-item:hover .down-content {
+    transform: translateY(0);
+    opacity: 1; /* Show on hover */
+}
+
+@media (max-width: 768px) {
+    .down-content {
+        /* position: static; */
+        transform: translateY(0);
+        opacity: 1; /* Show by default on mobile */
+    }
 }

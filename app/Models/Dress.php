@@ -11,7 +11,7 @@ class Dress extends Model
     protected $fillable = ['name','description','price','active'];
 
     public function sizes(){
-        return $this->belongsToMany(Size::class)->withPivot('active');
+        return $this->belongsToMany(Size::class)->withPivot(['id','active']);
     }
 
     public function images(){

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\DressImage;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/new', function (Request $request) {
@@ -20,4 +21,9 @@ Route::prefix('/dress')->group(function () {
 
 Auth::routes();
 
+Route::put('/profile/{user_id}', [App\Http\Controllers\Front\ProfileController::class, 'update'])->name('front.profile.update');
+Route::get('/profile', [App\Http\Controllers\Front\ProfileController::class, 'show'])->name('front.profile.show');
+
+Route::post('/reservation', [App\Http\Controllers\Front\ReservationController::class, 'store'])->name('front.reservation.store');
+Route::get('/reservation', [App\Http\Controllers\Front\ReservationController::class, 'index'])->name('front.reservation.index');
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

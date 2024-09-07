@@ -17,9 +17,9 @@ class DressFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->sentence(5),
-            'description' => $this->faker->sentence(50),
-            'price' => $this->faker->numberBetween(500000,1500000),
+            'name' => $this->faker->realText(20),
+            'description' => $this->faker->paragraph(5),
+            'price' => $this->faker->numberBetween(100,200),
             'active' => 1
         ];
     }

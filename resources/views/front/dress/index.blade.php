@@ -26,11 +26,11 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-4">
-                                                    <h6>{{ $dress->price }} S.P</h6>
+                                                    <h6>{{ $dress->price }} $</h6>
                                                 </div>
                                             </div>
                                             <div>
-                                                <p>{{ $dress->description }}</p>
+                                                <p>{{ Str::words($dress->description, 20, '...') }}</p>
                                                 <a href="{{ route('front.dress.show', ['id' => $dress->id]) }}">
                                                     <span>
                                                         View Details
@@ -45,6 +45,9 @@
                                     </div>
                                 </div>
                             @endforeach
+
+                            <div class="row">{{ $dresses->links('pagination::bootstrap-5') }}</div>
+
 
                         </div>
                     </div>

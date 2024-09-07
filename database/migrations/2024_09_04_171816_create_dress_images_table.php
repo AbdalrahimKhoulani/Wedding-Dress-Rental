@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('dress_images', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('dress_id');
+            $table->boolean('cover')->default(false);
 
             // $table->timestamps();
         });

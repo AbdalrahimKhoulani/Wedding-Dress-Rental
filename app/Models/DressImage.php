@@ -9,9 +9,10 @@ class DressImage extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $fillable = ['dress_id'];
+    protected $fillable = ['dress_id', 'cover'];
 
-    public function dress(){
+    public function dress()
+    {
         return $this->belongsTo(Dress::class);
     }
 }

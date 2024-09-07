@@ -17,11 +17,12 @@ class DressSeeder extends Seeder
     {
         $dresses = Dress::factory(20)->create();
         foreach ($dresses as $dress) {
-            $dress->price = floor($dress->price / 10000) * 10000;
-            $dress->save();
+            // $dress->price = floor($dress->price / 10000) * 10000;
+            // $dress->save();
 
             DressImage::create([
-                'dress_id' => $dress->id
+                'dress_id' => $dress->id,
+                'cover' => 1
             ]);
 
             $random = random_int(1, 3);
